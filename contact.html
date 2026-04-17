@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us — Charng Yuh (GAU) Co., Ltd.</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.contact-grid { display:grid; grid-template-columns:1fr 1.3fr; gap:70px; margin-top:52px; }
+.info-block { display:flex; flex-direction:column; gap:28px; }
+.info-item { display:flex; gap:18px; align-items:flex-start; }
+.info-icon { font-size:22px; flex-shrink:0; margin-top:2px; }
+.info-label { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-bottom:5px; }
+.info-value { font-size:15px; color:var(--silver); line-height:1.65; }
+.info-value a { color:var(--silver); text-decoration:none; }
+.info-value a:hover { color:var(--gold); }
+.quote-form { display:flex; flex-direction:column; gap:14px; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.field { display:flex; flex-direction:column; gap:6px; }
+.field label { font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--silver); }
+.field input, .field select, .field textarea {
+  background:var(--steel-mid); border:1px solid rgba(200,205,216,0.15); color:var(--white);
+  padding:12px 14px; font-family:'Barlow',sans-serif; font-size:14px; font-weight:300;
+  border-radius:2px; transition:border-color 0.2s; outline:none;
+}
+.field input:focus, .field select:focus, .field textarea:focus { border-color:var(--gold); }
+.field select option { background:var(--steel-mid); }
+.field textarea { resize:vertical; min-height:100px; }
+.form-submit {
+  background:var(--gold); color:var(--steel); padding:14px; border:none; border-radius:2px;
+  font-family:'Barlow Condensed',sans-serif; font-size:16px; font-weight:700;
+  letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;
+  transition:background 0.2s, transform 0.15s;
+}
+.form-submit:hover { background:var(--gold-light); transform:translateY(-1px); }
+.wa-block { background:rgba(37,211,102,0.08); border:1px solid rgba(37,211,102,0.2); padding:22px; border-radius:2px; display:flex; align-items:center; gap:16px; margin-top:10px; text-decoration:none; transition:background 0.2s; }
+.wa-block:hover { background:rgba(37,211,102,0.14); }
+.wa-block-icon { font-size:32px; flex-shrink:0; }
+.wa-block-label { font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:rgba(37,211,102,0.9); margin-bottom:3px; }
+.wa-block-num { font-size:18px; font-weight:500; color:var(--white); }
+@media(max-width:768px){ .contact-grid{grid-template-columns:1fr;gap:40px} .form-row{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html"><span>CHARNG</span> YUH</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="quality.html">Quality</a></li>
+    <li><a href="special-service.html">Special Service</a></li>
+    <li><a href="contact.html" class="nav-cta active">Contact Us</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-bg"></div>
+  <div class="page-header-grid"></div>
+  <div class="page-header-accent"></div>
+  <div class="page-header-content">
+    <div class="page-label">Get In Touch</div>
+    <h1 class="page-title">CONTACT US</h1>
+    <p class="page-desc">Please leave your information. We will contact you as soon as possible. Free samples available upon request.</p>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="contact-grid">
+
+    <div class="info-block">
+      <div class="info-item">
+        <span class="info-icon">🏭</span>
+        <div>
+          <div class="info-label">Factory Address</div>
+          <div class="info-value">No. 7-1, Lane 2, Gangde Rd.,<br>Gangshan Dist., Kaohsiung City 82055,<br>Taiwan (R.O.C.)</div>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">📞</span>
+        <div>
+          <div class="info-label">Telephone</div>
+          <div class="info-value"><a href="tel:+886762833325">+886-7-628-3325</a></div>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">📠</span>
+        <div>
+          <div class="info-label">Fax</div>
+          <div class="info-value">+886-7-628-3607</div>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">✉️</span>
+        <div>
+          <div class="info-label">Email</div>
+          <div class="info-value"><a href="mailto:charng.yuhind@msa.hinet.net">charng.yuhind@msa.hinet.net</a></div>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">🌐</span>
+        <div>
+          <div class="info-label">Website</div>
+          <div class="info-value"><a href="http://www.charngyuh.com" target="_blank">www.charngyuh.com</a></div>
+        </div>
+      </div>
+      <a class="wa-block" href="https://wa.me/996923240025" target="_blank">
+        <span class="wa-block-icon">💬</span>
+        <div>
+          <div class="wa-block-label">WhatsApp — Click to Chat</div>
+          <div class="wa-block-num">+996 923 240 025</div>
+        </div>
+      </a>
+    </div>
+
+    <form class="quote-form" onsubmit="handleSubmit(event)">
+      <div class="form-row">
+        <div class="field">
+          <label>Your Name *</label>
+          <input type="text" required placeholder="John Smith">
+        </div>
+        <div class="field">
+          <label>Company *</label>
+          <input type="text" required placeholder="ABC Hardware Inc.">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label>Email *</label>
+          <input type="email" required placeholder="you@company.com">
+        </div>
+        <div class="field">
+          <label>Country</label>
+          <input type="text" placeholder="United States">
+        </div>
+      </div>
+      <div class="field">
+        <label>Product of Interest</label>
+        <select>
+          <option value="">-- Select a product --</option>
+          <option>Tapping Screws</option>
+          <option>Concrete Screws</option>
+          <option>Self-Drilling Screws</option>
+          <option>Painted Head Screws</option>
+          <option>Particle Board &amp; Deck Screws</option>
+          <option>Window Frame Screws</option>
+          <option>Long Size Screws</option>
+          <option>Roofing &amp; Piercing Screws</option>
+          <option>Custom Packaging / OEM</option>
+          <option>Multiple Products</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Message / Requirements</label>
+        <textarea placeholder="Please describe the size, quantity, material, and any special requirements. We will respond within 24 hours."></textarea>
+      </div>
+      <button type="submit" class="form-submit">Send Message — We Reply Within 24hrs</button>
+      <div id="success" style="display:none;color:#25D366;font-size:14px;text-align:center;padding:12px;background:rgba(37,211,102,0.08);border-radius:2px;">
+        ✓ Thank you! We'll be in touch within 24 hours.
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <div>
+    <div class="footer-logo"><span>CHARNG</span> YUH (GAU) CO., LTD.</div>
+    <div class="footer-info" style="margin-top:8px;">No. 7-1, Lane 2, Gangde Rd., Gangshan Dist., Kaohsiung City 82055, Taiwan<br>Tel: +886-7-628-3325 · charng.yuhind@msa.hinet.net</div>
+  </div>
+  <div class="footer-links">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a>
+    <a href="quality.html">Quality</a><a href="special-service.html">Special Service</a><a href="contact.html">Contact</a>
+  </div>
+  <div class="footer-info">© 2025 Charng Yuh (GAU) Co., Ltd.</div>
+</footer>
+<a class="wa-float" href="https://wa.me/996923240025" target="_blank">💬 WhatsApp Us</a>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  document.getElementById('success').style.display = 'block';
+  e.target.reset();
+  setTimeout(() => document.getElementById('success').style.display = 'none', 6000);
+}
+</script>
+</body></html>
