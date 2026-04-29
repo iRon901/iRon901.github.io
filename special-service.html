@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Special Service — Charng Yuh (GAU) Co., Ltd.</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.service-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; margin-top:52px; align-items:center; }
+.service-grid.reverse { direction:rtl; }
+.service-grid.reverse > * { direction:ltr; }
+.service-img img { width:100%; height:320px; object-fit:cover; border-radius:2px; display:block; }
+.service-content {}
+.service-tag { display:inline-block; background:rgba(201,168,76,0.12); border:1px solid rgba(201,168,76,0.3); padding:4px 12px; border-radius:2px; font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-bottom:14px; }
+.service-title { font-family:'Bebas Neue',sans-serif; font-size:36px; color:var(--white); margin-bottom:14px; line-height:1.1; }
+.service-desc { font-size:15px; font-weight:300; color:var(--silver); line-height:1.75; margin-bottom:18px; }
+.service-list { list-style:none; display:flex; flex-direction:column; gap:8px; }
+.service-list li { display:flex; align-items:flex-start; gap:10px; font-size:14px; color:var(--silver); font-weight:300; }
+.service-list li::before { content:'—'; color:var(--gold); font-weight:700; flex-shrink:0; }
+.divider { border:none; border-top:1px solid rgba(200,205,216,0.08); margin:70px 0; }
+.oem-strip { background:var(--steel-mid); border:1px solid rgba(200,205,216,0.08); padding:40px; margin-top:60px; display:grid; grid-template-columns:1fr 1fr 1fr; gap:30px; }
+.oem-item { text-align:center; padding:20px 10px; }
+.oem-icon { font-size:36px; margin-bottom:12px; }
+.oem-label { font-family:'Barlow Condensed',sans-serif; font-size:16px; font-weight:700; color:var(--white); margin-bottom:6px; }
+.oem-sub { font-size:12px; color:var(--silver); font-weight:300; }
+@media(max-width:768px){ .service-grid,.service-grid.reverse{grid-template-columns:1fr;gap:28px;direction:ltr} .oem-strip{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html"><span>CHARNG</span> YUH</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="quality.html">Quality</a></li>
+    <li><a href="special-service.html" class="active">Special Service</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <div class="lang-switcher" id="langSwitcher">
+    <button class="lang-btn" onclick="toggleLang()">
+      <span class="lang-flag" id="currentFlag">&#x1F1FA;&#x1F1F8;</span>
+      <span class="lang-label" id="currentLang">EN</span>
+      <span class="lang-arrow">&#x25BC;</span>
+    </button>
+    <div class="lang-dropdown">
+      <div class="lang-option" onclick="setLang('en')">&#x1F1FA;&#x1F1F8; &nbsp;English</div>
+      <div class="lang-option" onclick="setLang('zh')">&#x1F1F9;&#x1F1FC; &nbsp;&#x7E41;&#x9AD4;&#x4E2D;&#x6587;</div>
+      <div class="lang-option" onclick="setLang('ja')">&#x1F1EF;&#x1F1F5; &nbsp;&#x65E5;&#x672C;&#x8A9E;</div>
+      <div class="lang-option" onclick="setLang('es')">&#x1F1EA;&#x1F1F8; &nbsp;Espa&#xF1;ol</div>
+      <div class="lang-option" onclick="setLang('ar')">&#x1F1F8;&#x1F1E6; &nbsp;&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</div>
+      <div class="lang-option" onclick="setLang('de')">&#x1F1E9;&#x1F1EA; &nbsp;Deutsch</div>
+      <div class="lang-option" onclick="setLang('ko')">&#x1F1F0;&#x1F1F7; &nbsp;&#xD55C;&#xAD6D;&#xC5B4;</div>
+      <div class="lang-option" onclick="setLang('pt')">&#x1F1E7;&#x1F1F7; &nbsp;Portugu&#xEA;s</div>
+      <div class="lang-option" onclick="setLang('zhs')">&#x1F1E8;&#x1F1F3; &nbsp;&#x7B80;&#x4F53;&#x4E2D;&#x6587;</div>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-bg"></div>
+  <div class="page-header-grid"></div>
+  <div class="page-header-accent"></div>
+  <div class="page-header-content">
+    <div class="page-label" data-i18n="svc_page_label">Beyond Standard</div>
+    <h1 class="page-title" data-i18n="svc_page_title">SPECIAL SERVICE</h1>
+    <p class="page-desc" data-i18n="svc_page_desc">From private label packaging to custom OEM screws — we go beyond standard catalogue products to meet your specific business needs.</p>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <!-- Poly Bag & Jar Packaging -->
+  <div class="service-grid">
+    <div class="service-img">
+      <img src="https://static.wixstatic.com/media/d42b40_74cf3437f0d643cca5acd0cbc5a35c73~mv2.jpg/v1/fill/w_900,h_600,al_c,q_85,enc_avif,quality_auto/d42b40_74cf3437f0d643cca5acd0cbc5a35c73~mv2.jpg" alt="Poly Bag and Jar Package Service">
+    </div>
+    <div class="service-content">
+      <div class="service-tag" data-i18n="svc1_tag">Packaging</div>
+      <h2 class="service-title" data-i18n="svc1_title">POLY BAG &amp; JAR PACKAGING</h2>
+      <p class="service-desc" data-i18n="svc1_desc">We offer full custom packaging services including poly bags, plastic jars, blister packs, and retail-ready packaging — all with your private label or brand.</p>
+      <ul class="service-list">
+        <li data-i18n="svc1_li1">Poly bag with custom printed label</li>
+        <li data-i18n="svc1_li2">Plastic jar packs (various sizes)</li>
+        <li data-i18n="svc1_li3">Blister card retail packaging</li>
+        <li data-i18n="svc1_li4">Private label with your logo &amp; barcode</li>
+        <li data-i18n="svc1_li5">Mixed assortment packs available</li>
+        <li data-i18n="svc1_li6">Flexible minimum order quantities</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- OEM -->
+  <div class="service-grid reverse">
+    <div class="service-img">
+      <img src="https://static.wixstatic.com/media/d42b40_4bef03606d1c403b8f8f827a3ffef4b3~mv2.jpg/v1/fill/w_900,h_600,al_c,q_85,enc_avif,quality_auto/d42b40_4bef03606d1c403b8f8f827a3ffef4b3~mv2.jpg" alt="Special and Non-Standard Screws">
+    </div>
+    <div class="service-content">
+      <div class="service-tag" data-i18n="svc2_tag">OEM / ODM</div>
+      <h2 class="service-title" data-i18n="svc2_title">CUSTOM OEM MANUFACTURING</h2>
+      <p class="service-desc" data-i18n="svc2_desc">Have a specific screw design, non-standard size, or special material requirement? Send us your drawings or samples and we'll produce exactly what you need.</p>
+      <ul class="service-list">
+        <li data-i18n="svc2_li1">Non-standard sizes and thread forms</li>
+        <li data-i18n="svc2_li2">Special head styles and drive types</li>
+        <li data-i18n="svc2_li3">Custom coatings and surface treatments</li>
+        <li data-i18n="svc2_li4">Unusual materials and alloys</li>
+        <li data-i18n="svc2_li5">Engineering drawings accepted</li>
+        <li data-i18n="svc2_li6">Prototype samples before mass production</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- OEM Strip -->
+  <div class="oem-strip">
+    <div class="oem-item">
+      <div class="oem-icon">📦</div>
+      <div class="oem-label" data-i18n="oem1_label">Private Label</div>
+      <div class="oem-sub" data-i18n="oem1_sub">Your brand on every package. Full customization of label design, barcode, and product description.</div>
+    </div>
+    <div class="oem-item">
+      <div class="oem-icon">⚙️</div>
+      <div class="oem-label" data-i18n="oem2_label">Custom Specs</div>
+      <div class="oem-sub" data-i18n="oem2_sub">Non-standard sizes, unusual thread forms, specialty coatings — we work from your technical drawings.</div>
+    </div>
+    <div class="oem-item">
+      <div class="oem-icon">🚢</div>
+      <div class="oem-label" data-i18n="oem3_label">Global Shipping</div>
+      <div class="oem-sub" data-i18n="oem3_sub">We handle export documentation, packaging, and logistics to 40+ countries worldwide.</div>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:60px;">
+    <div class="section-label" data-i18n="svc_cta_label">Ready to start?</div>
+    <h2 class="section-title" data-i18n="svc_cta_title">LET'S DISCUSS YOUR NEEDS</h2>
+    <p style="font-size:16px;font-weight:300;color:var(--silver);max-width:480px;margin:0 auto 32px;" data-i18n="svc_cta_desc">Tell us what you need and we'll respond within 24 hours with a solution and pricing.</p>
+    <a href="contact.html" class="btn-primary" data-i18n="svc_cta_btn">Contact Us Now →</a>
+  </div>
+
+</div>
+
+<footer>
+  <div>
+    <div class="footer-logo"><span>CHARNG</span> YUH (GAU) CO., LTD.</div>
+    <div class="footer-info" style="margin-top:8px;">No. 7-1, Lane 2, Gangde Rd., Gangshan Dist., Kaohsiung City 82055, Taiwan<br>Tel: +886-7-628-3325 · charng.yuhind@msa.hinet.net</div>
+  </div>
+  <div class="footer-links">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a>
+    <a href="quality.html">Quality</a><a href="special-service.html">Special Service</a><a href="contact.html">Contact</a>
+  </div>
+  <div class="footer-info">© 2025 Charng Yuh (GAU) Co., Ltd.</div>
+</footer>
+<a class="wa-float" href="https://wa.me/996923240025" target="_blank">💬 WhatsApp Us</a>
+
+<script src="i18n.js"></script>
+<script>applyLang(getLang());</script>
+</body></html>
