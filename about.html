@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — Charng Yuh (GAU) Co., Ltd.</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.about-body { display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:start; }
+.about-text p { font-size:16px; font-weight:300; line-height:1.8; color:var(--silver); margin-bottom:18px; }
+.about-text p strong { color:var(--white); font-weight:500; }
+.value-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:44px; }
+.value-card { background:var(--steel-mid); border:1px solid rgba(200,205,216,0.08); padding:24px 20px; border-left:3px solid var(--gold); }
+.value-title { font-family:'Barlow Condensed',sans-serif; font-size:16px; font-weight:700; color:var(--white); margin-bottom:6px; }
+.value-text { font-size:13px; color:var(--silver); font-weight:300; line-height:1.6; }
+.aside-img img { width:100%; border-radius:2px; display:block; margin-bottom:4px; }
+.stat-row { display:grid; grid-template-columns:repeat(2,1fr); gap:4px; margin-top:4px; }
+.stat-box { background:var(--steel-mid); padding:22px 18px; text-align:center; }
+.stat-box-val { font-family:'Bebas Neue',sans-serif; font-size:40px; color:var(--gold); line-height:1; }
+.stat-box-lbl { font-size:11px; color:var(--silver); font-weight:400; letter-spacing:0.5px; margin-top:4px; }
+@media(max-width:768px){ .about-body{grid-template-columns:1fr;gap:36px} .value-grid{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html"><span>CHARNG</span> YUH</a>
+  <ul class="nav-links">
+    <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+    <li><a href="about.html" class="active" data-i18n="nav_about">About Us</a></li>
+    <li><a href="products.html" data-i18n="nav_products">Products</a></li>
+    <li><a href="quality.html" data-i18n="nav_quality">Quality</a></li>
+    <li><a href="special-service.html" data-i18n="nav_service">Special Service</a></li>
+    <li><a href="contact.html" class="nav-cta" data-i18n="nav_contact">Contact Us</a></li>
+  </ul>
+  <div class="lang-switcher" id="langSwitcher">
+    <button class="lang-btn" onclick="toggleLang()">
+      <span class="lang-flag" id="currentFlag">&#x1F1FA;&#x1F1F8;</span>
+      <span class="lang-label" id="currentLang">EN</span>
+      <span class="lang-arrow">&#x25BC;</span>
+    </button>
+    <div class="lang-dropdown">
+      <div class="lang-option" onclick="setLang('en')">&#x1F1FA;&#x1F1F8; &nbsp;English</div>
+      <div class="lang-option" onclick="setLang('zh')">&#x1F1F9;&#x1F1FC; &nbsp;&#x7E41;&#x9AD4;&#x4E2D;&#x6587;</div>
+      <div class="lang-option" onclick="setLang('ja')">&#x1F1EF;&#x1F1F5; &nbsp;&#x65E5;&#x672C;&#x8A9E;</div>
+      <div class="lang-option" onclick="setLang('es')">&#x1F1EA;&#x1F1F8; &nbsp;Espa&#xF1;ol</div>
+      <div class="lang-option" onclick="setLang('ar')">&#x1F1F8;&#x1F1E6; &nbsp;&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</div>
+      <div class="lang-option" onclick="setLang('de')">&#x1F1E9;&#x1F1EA; &nbsp;Deutsch</div>
+      <div class="lang-option" onclick="setLang('ko')">&#x1F1F0;&#x1F1F7; &nbsp;&#xD55C;&#xAD6D;&#xC5B4;</div>
+      <div class="lang-option" onclick="setLang('pt')">&#x1F1E7;&#x1F1F7; &nbsp;Portugu&#xEA;s</div>
+      <div class="lang-option" onclick="setLang('zhs')">&#x1F1E8;&#x1F1F3; &nbsp;&#x7B80;&#x4F53;&#x4E2D;&#x6587;</div>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-bg"></div>
+  <div class="page-header-grid"></div>
+  <div class="page-header-accent"></div>
+  <div class="page-header-content">
+    <div class="page-label" data-i18n="about_page_label">Who We Are</div>
+    <h1 class="page-title" data-i18n="about_page_title">ABOUT US</h1>
+    <p class="page-desc" data-i18n="about_page_desc">Just give us a try today, and you will find our outstanding service &amp; quality products tomorrow.</p>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="about-body">
+    <div class="about-text">
+      <div class="section-label" data-i18n="about_story_label">Our Story</div>
+      <h2 class="section-title">MANUFACTURER &amp;<br>EXPORTER SINCE 1995</h2>
+      <p data-i18n="about_p1">Charng Yuh is a <strong>manufacturer &amp; exporter of industrial fasteners</strong> in Taiwan (R.O.C.) since 1995. For more than 30 years, we have developed relationships of trust and respect with our customers from the global market.</p>
+      <p data-i18n="about_p2">Whether you are an <strong>importer, OEM, ODM, wholesale distributor, or industrial manufacturer</strong>, we understand the best way how to meet your needs — in service, innovation, and quality — to create a win-win approach in long-term relationships.</p>
+      <p data-i18n="about_p3">We act with integrity in all we do. You can expect nothing less when doing business with us. A strong relationship will be built not only with us, but between you and your own customers.</p>
+      <p data-i18n="about_p3">Our <strong>knowledgeable sales team</strong> is always available to answer your questions. Just give us a try today, and you will find our outstanding service and quality products tomorrow.</p>
+      <div style="margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="contact.html" class="btn-primary" data-i18n="about_cta1">Get In Touch</a>
+        <a href="products.html" class="btn-ghost" data-i18n="about_cta2">View Products</a>
+      </div>
+    </div>
+    <div>
+      <div class="aside-img">
+        <img src="https://static.wixstatic.com/media/d42b40_647cccfaca50478780a7096637ca5d80~mv2.jpg/v1/fill/w_900,h_580,al_c,q_85,enc_avif,quality_auto/d42b40_647cccfaca50478780a7096637ca5d80~mv2.jpg" alt="Charng Yuh Factory" style="height:300px;object-fit:cover;">
+      </div>
+      <div class="stat-row">
+        <div class="stat-box"><div class="stat-box-val">1995</div><div class="stat-box-lbl" data-i18n="about_stat1">Founded</div></div>
+        <div class="stat-box"><div class="stat-box-val">30+</div><div class="stat-box-lbl" data-i18n="about_stat2">Years Experience</div></div>
+        <div class="stat-box"><div class="stat-box-val">40+</div><div class="stat-box-lbl" data-i18n="about_stat3" data-i18n="about_stat3">Countries Served</div></div>
+        <div class="stat-box"><div class="stat-box-val">ISO</div><div class="stat-box-lbl" data-i18n="about_stat4">9001 Certified</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:70px;">
+    <div class="section-label" data-i18n="about_val_label">Our Values</div>
+    <h2 class="section-title" data-i18n="about_val_title">WHY CHOOSE US</h2>
+    <div class="value-grid">
+      <div class="value-card">
+        <div class="value-title" data-i18n="val1_title">Quality First</div>
+        <div class="value-text" data-i18n="val1_text">Every production lot is QC inspected before shipment. ISO 9001 and OHSAS 18001 certified — consistent quality you can count on.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-title" data-i18n="val2_title">Long-term Partnership</div>
+        <div class="value-text" data-i18n="val2_text">We invest in understanding your business needs and grow with you. Most of our customers have worked with us for 10+ years.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-title" data-i18n="val3_title">Full Customization</div>
+        <div class="value-text" data-i18n="val3_text">OEM, ODM, custom packaging, private label — we handle it all. Flexible minimum orders for new partnerships.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-title" data-i18n="val4_title">Fast Response</div>
+        <div class="value-text" data-i18n="val4_text">We respond within 24 hours. Free samples available. Our team speaks your language — English, Chinese.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div>
+    <div class="footer-logo"><span>CHARNG</span> YUH (GAU) CO., LTD.</div>
+    <div class="footer-info" style="margin-top:8px;">No. 7-1, Lane 2, Gangde Rd., Gangshan Dist., Kaohsiung City 82055, Taiwan<br>Tel: +886-7-628-3325 · charng.yuhind@msa.hinet.net</div>
+  </div>
+  <div class="footer-links">
+    <a href="index.html" data-i18n="nav_home">Home</a><a href="about.html">About</a><a href="products.html" data-i18n="nav_products">Products</a>
+    <a href="quality.html" data-i18n="nav_quality">Quality</a><a href="special-service.html" data-i18n="nav_service">Special Service</a><a href="contact.html">Contact</a>
+  </div>
+  <div class="footer-info">© 2025 Charng Yuh (GAU) Co., Ltd.</div>
+</footer>
+<a class="wa-float" href="https://wa.me/996923240025" target="_blank">💬 WhatsApp Us</a>
+
+<script src="i18n.js"></script>
+<script>applyLang(getLang());</script>
+</body></html>
