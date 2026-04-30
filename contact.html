@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us — Charng Yuh (GAU) Co., Ltd.</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.contact-grid { display:grid; grid-template-columns:1fr 1.3fr; gap:70px; margin-top:52px; }
+.info-block { display:flex; flex-direction:column; gap:28px; }
+.info-item { display:flex; gap:18px; align-items:flex-start; }
+.info-icon { font-size:22px; flex-shrink:0; margin-top:2px; }
+.info-label { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-bottom:5px; }
+.info-value { font-size:15px; color:var(--silver); line-height:1.65; }
+.info-value a { color:var(--silver); text-decoration:none; }
+.info-value a:hover { color:var(--gold); }
+.quote-form { display:flex; flex-direction:column; gap:14px; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.field { display:flex; flex-direction:column; gap:6px; }
+.field label { font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--silver); }
+.field input, .field select, .field textarea {
+  background:var(--steel-mid); border:1px solid rgba(200,205,216,0.15); color:var(--white);
+  padding:12px 14px; font-family:'Barlow',sans-serif; font-size:14px; font-weight:300;
+  border-radius:2px; transition:border-color 0.2s; outline:none;
+}
+.field input:focus, .field select:focus, .field textarea:focus { border-color:var(--gold); }
+.field select option { background:var(--steel-mid); }
+.field textarea { resize:vertical; min-height:100px; }
+.form-submit {
+  background:var(--gold); color:var(--steel); padding:14px; border:none; border-radius:2px;
+  font-family:'Barlow Condensed',sans-serif; font-size:16px; font-weight:700;
+  letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;
+  transition:background 0.2s, transform 0.15s;
+}
+.form-submit:hover { background:var(--gold-light); transform:translateY(-1px); }
+.wa-block { background:rgba(37,211,102,0.08); border:1px solid rgba(37,211,102,0.2); padding:22px; border-radius:2px; display:flex; align-items:center; gap:16px; margin-top:10px; text-decoration:none; transition:background 0.2s; }
+.wa-block:hover { background:rgba(37,211,102,0.14); }
+.wa-block-icon { font-size:32px; flex-shrink:0; }
+.wa-block-label { font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:rgba(37,211,102,0.9); margin-bottom:3px; }
+.wa-block-num { font-size:18px; font-weight:500; color:var(--white); }
+@media(max-width:768px){ .contact-grid{grid-template-columns:1fr;gap:40px} .form-row{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html" data-i18n="nav_logo"><span>CHARNG</span> YUH</a>
+  <ul class="nav-links">
+    <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+    <li><a href="about.html" data-i18n="nav_about">About Us</a></li>
+    <li><a href="products.html" data-i18n="nav_products">Products</a></li>
+    <li><a href="quality.html" data-i18n="nav_quality">Quality</a></li>
+    <li><a href="special-service.html" data-i18n="nav_service">Special Service</a></li>
+    <li><a href="contact.html" class="nav-cta active" data-i18n="nav_contact">Contact Us</a></li>
+  </ul>
+  <div class="lang-switcher" id="langSwitcher">
+    <button class="lang-btn" onclick="toggleLang()">
+      <span class="lang-flag" id="currentFlag">&#x1F1FA;&#x1F1F8;</span>
+      <span class="lang-label" id="currentLang">EN</span>
+      <span class="lang-arrow">&#x25BC;</span>
+    </button>
+    <div class="lang-dropdown">
+      <div class="lang-option" onclick="setLang('en')">🇺🇸 &nbsp;English</div>
+      <div class="lang-option" onclick="setLang('zh')">🇹🇼 &nbsp;繁體中文</div>
+      <div class="lang-option" onclick="setLang('zhs')">🇨🇳 &nbsp;简体中文</div>
+      <div class="lang-option" onclick="setLang('ja')">🇯🇵 &nbsp;日本語</div>
+      <div class="lang-option" onclick="setLang('ko')">🇰🇷 &nbsp;한국어</div>
+      <div class="lang-option" onclick="setLang('vi')">🇻🇳 &nbsp;Tiếng Việt</div>
+      <div class="lang-option" onclick="setLang('th')">🇹🇭 &nbsp;ภาษาไทย</div>
+      <div class="lang-option" onclick="setLang('hi')">🇮🇳 &nbsp;हिन्दी</div>
+      <div class="lang-option" onclick="setLang('ar')">🇸🇦 &nbsp;العربية</div>
+      <div class="lang-option" onclick="setLang('de')">🇩🇪 &nbsp;Deutsch</div>
+      <div class="lang-option" onclick="setLang('es')">🇪🇸 &nbsp;Español</div>
+      <div class="lang-option" onclick="setLang('pt')">🇧🇷 &nbsp;Português</div>
+    </div>
+      <div class="lang-option" onclick="setLang('zh')">&#x1F1F9;&#x1F1FC; &nbsp;&#x7E41;&#x9AD4;&#x4E2D;&#x6587;</div>
+      <div class="lang-option" onclick="setLang('ja')">&#x1F1EF;&#x1F1F5; &nbsp;&#x65E5;&#x672C;&#x8A9E;</div>
+      <div class="lang-option" onclick="setLang('es')">&#x1F1EA;&#x1F1F8; &nbsp;Espa&#xF1;ol</div>
+      <div class="lang-option" onclick="setLang('ar')">&#x1F1F8;&#x1F1E6; &nbsp;&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</div>
+      <div class="lang-option" onclick="setLang('de')">&#x1F1E9;&#x1F1EA; &nbsp;Deutsch</div>
+      <div class="lang-option" onclick="setLang('ko')">&#x1F1F0;&#x1F1F7; &nbsp;&#xD55C;&#xAD6D;&#xC5B4;</div>
+      <div class="lang-option" onclick="setLang('pt')">&#x1F1E7;&#x1F1F7; &nbsp;Portugu&#xEA;s</div>
+      <div class="lang-option" onclick="setLang('zhs')">&#x1F1E8;&#x1F1F3; &nbsp;&#x7B80;&#x4F53;&#x4E2D;&#x6587;</div>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-bg"></div>
+  <div class="page-header-grid"></div>
+  <div class="page-header-accent"></div>
+  <div class="page-header-content">
+    <div class="page-label" data-i18n="con_page_label">Get In Touch</div>
+    <h1 class="page-title" data-i18n="con_page_title">CONTACT US</h1>
+    <p class="page-desc" data-i18n="con_page_desc">Please leave your information. We will contact you as soon as possible. Free samples available upon request.</p>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="contact-grid">
+
+    <div class="info-block">
+      <div class="info-item">
+        <span class="info-icon">🏭</span>
+        <div>
+          <div class="info-label" data-i18n="con_addr_label">Factory Address</div>
+          <div class="info-value">No. 7-1, Lane 2, Gangde Rd.,<br>Gangshan Dist., Kaohsiung City 82055,<br>Taiwan (R.O.C.)</div>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">📞</span>
+        <div>
+          <div class="info-label" data-i18n="con_tel_label">Telephone</div>
+          <div class="info-value"><a href="tel:+886762833325">+886-7-628-3325</a></div>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">📠</span>
+        <div>
+          <div class="info-label" data-i18n="con_fax_label">Fax</div>
+          <div class="info-value">+886-7-628-3607</div>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">✉️</span>
+        <div>
+          <div class="info-label" data-i18n="con_email_label">Email</div>
+          <div class="info-value"><a href="mailto:charng.yuhind@msa.hinet.net">charng.yuhind@msa.hinet.net</a></div>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">🌐</span>
+        <div>
+          <div class="info-label" data-i18n="con_web_label">Website</div>
+          <div class="info-value"><a href="http://www.charngyuh.com" target="_blank">www.charngyuh.com</a></div>
+        </div>
+      </div>
+      <a class="wa-block" href="https://wa.me/996923240025" target="_blank">
+        <span class="wa-block-icon">💬</span>
+        <div>
+          <div class="wa-block-label" data-i18n="con_wa_label">WhatsApp — Click to Chat</div>
+          <div class="wa-block-num">+996 923 240 025</div>
+        </div>
+      </a>
+    </div>
+
+    <form class="quote-form" onsubmit="handleSubmit(event)">
+      <div class="form-row">
+        <div class="field">
+          <label>Your Name *</label>
+          <input type="text" required data-i18n-ph="con_f_name" placeholder="Your Name *">
+        </div>
+        <div class="field">
+          <label>Company *</label>
+          <input type="text" required data-i18n-ph="con_f_company" placeholder="Company *">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label>Email *</label>
+          <input type="email" required data-i18n-ph="con_f_email" placeholder="Email *">
+        </div>
+        <div class="field">
+          <label>Country</label>
+          <input type="text" data-i18n-ph="con_f_country" placeholder="Country">
+        </div>
+      </div>
+      <div class="field">
+        <label>Product of Interest</label>
+        <select>
+          <option value="" data-i18n="con_f_product">-- Select a product --</option>
+          <option>Tapping Screws</option>
+          <option>Concrete Screws</option>
+          <option>Self-Drilling Screws</option>
+          <option>Painted Head Screws</option>
+          <option>Particle Board &amp; Deck Screws</option>
+          <option>Window Frame Screws</option>
+          <option>Long Size Screws</option>
+          <option>Roofing &amp; Piercing Screws</option>
+          <option>Custom Packaging / OEM</option>
+          <option>Multiple Products</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Message / Requirements</label>
+        <textarea data-i18n-ph="con_f_msg" placeholder="Please describe the size, quantity, material, and any special requirements. We will respond within 24 hours."></textarea>
+      </div>
+      <button type="submit" class="form-submit" data-i18n="con_f_submit">Send Message — We Reply Within 24hrs</button>
+      <div id="success" style="display:none;color:#25D366;font-size:14px;text-align:center;padding:12px;background:rgba(37,211,102,0.08);border-radius:2px;">
+        <span data-i18n="con_success">✓ Thank you! We'll be in touch within 24 hours.</span>
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <div>
+    <div class="footer-logo"><span>CHARNG</span> YUH (GAU) CO., LTD.</div>
+    <div class="footer-info" style="margin-top:8px;">No. 7-1, Lane 2, Gangde Rd., Gangshan Dist., Kaohsiung City 82055, Taiwan<br>Tel: +886-7-628-3325 · charng.yuhind@msa.hinet.net</div>
+  </div>
+  <div class="footer-links">
+    <a href="index.html" data-i18n="nav_home">Home</a><a href="about.html">About</a><a href="products.html" data-i18n="nav_products">Products</a>
+    <a href="quality.html" data-i18n="nav_quality">Quality</a><a href="special-service.html" data-i18n="nav_service">Special Service</a><a href="contact.html">Contact</a>
+  </div>
+  <div class="footer-info">© 2025 Charng Yuh (GAU) Co., Ltd.</div>
+</footer>
+<a class="wa-float" href="https://wa.me/996923240025" target="_blank">💬 WhatsApp Us</a>
+
+<script>
+// patch placeholder support
+document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+  const key = el.getAttribute('data-i18n-ph');
+  const t = I18N[getLang()];
+  if (t && t[key]) el.placeholder = t[key];
+});
+function handleSubmit(e) {
+  e.preventDefault();
+  document.getElementById('success').style.display = 'block';
+  e.target.reset();
+  setTimeout(() => document.getElementById('success').style.display = 'none', 6000);
+}
+</script>
+
+<script src="i18n.js"></script>
+<script>applyLang(getLang());</script>
+</body></html>
