@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charng Yuh (GAU) Co., Ltd. | Taiwan Fastener Manufacturer & Exporter</title>
+<meta name="description" content="ISO 9001 certified Taiwan fastener manufacturer since 1995. Self-drilling screws, concrete screws, roofing screws, tapping screws, custom fasteners for global buyers." />
+<meta name="keywords" content="Taiwan screw manufacturer, fastener supplier Taiwan, self drilling screws, concrete screws, roofing screws, ISO 9001 fastener" />
+<link rel="stylesheet" href="style.css">
+<style>
+/* ── HERO ── */
+.hero {
+  min-height: 100vh; display: flex; align-items: center;
+  position: relative; overflow: hidden; padding: 68px 56px 0;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 60% at 72% 40%, rgba(201,168,76,0.08) 0%, transparent 60%),
+    linear-gradient(135deg, #0b0e18 0%, #111827 50%, #1a2335 100%);
+}
+.hero-grid-bg {
+  position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(100,140,200,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(100,140,200,0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.hero-inner {
+  position: relative; z-index: 2; width: 100%;
+  display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center;
+  padding: 60px 0 80px;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.35);
+  padding: 7px 14px; border-radius: 2px;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--gold);
+  margin-bottom: 24px; animation: fadeUp 0.6s ease both;
+}
+.hero-badge::before {
+  content: ''; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--gold); animation: pulse 2s ease infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+@keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+
+.hero h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(60px, 7.5vw, 100px);
+  line-height: 0.92; letter-spacing: 2px; color: var(--white);
+  animation: fadeUp 0.6s 0.1s ease both; margin-bottom: 22px;
+}
+.hero h1 em { font-style: normal; color: var(--gold); display: block; }
+.hero-lead {
+  font-size: 18px; font-weight: 300; line-height: 1.7; color: var(--silver);
+  max-width: 500px; animation: fadeUp 0.6s 0.2s ease both; margin-bottom: 36px;
+}
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; animation: fadeUp 0.6s 0.3s ease both; }
+
+.hero-proof {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 2px;
+  margin-top: 48px; animation: fadeUp 0.6s 0.4s ease both;
+  border-top: 1px solid rgba(200,205,216,0.1); padding-top: 32px;
+}
+.proof-item { padding-right: 20px; }
+.proof-val {
+  font-family: 'Bebas Neue', sans-serif; font-size: 40px;
+  line-height: 1; color: var(--white);
+}
+.proof-lbl { font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--silver); margin-top: 4px; }
+
+/* Buyer panel */
+.buyer-panel {
+  background: linear-gradient(145deg, #15213a, #1e2f4a);
+  border: 1px solid rgba(201,168,76,0.25);
+  border-radius: 4px; padding: 32px 30px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  animation: fadeUp 0.6s 0.2s ease both;
+}
+.buyer-panel h3 {
+  font-family: 'Bebas Neue', sans-serif; font-size: 26px;
+  letter-spacing: 1px; color: var(--white); margin-bottom: 22px;
+}
+.check-item {
+  display: flex; gap: 10px; align-items: flex-start;
+  font-size: 14px; color: var(--silver); margin-bottom: 13px; font-weight: 300;
+}
+.check-item::before { content: '✓'; color: #7ee787; font-weight: 900; flex-shrink: 0; margin-top: 1px; }
+.check-item b { color: var(--white); font-weight: 500; }
+.buyer-panel .btn-primary { display: block; text-align: center; margin-top: 24px; }
+
+/* ── CERTS STRIP ── */
+.certs-strip {
+  background: var(--gold); padding: 14px 56px;
+  display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap;
+}
+.cert-item {
+  display: flex; align-items: center; gap: 10px;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700;
+  letter-spacing: 1px; text-transform: uppercase; color: var(--steel);
+}
+
+/* ── PRODUCTS ── */
+.products-section { padding: 88px 56px; background: var(--steel-mid); }
+.section-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; flex-wrap: wrap; gap: 20px; }
+.prod-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; background: rgba(200,205,216,0.06); }
+.prod-card {
+  background: var(--steel); border: 1px solid rgba(200,205,216,0.07);
+  overflow: hidden; position: relative; transition: transform 0.2s, border-color 0.2s;
+  display: flex; flex-direction: column;
+}
+.prod-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
+.prod-card:hover { transform: translateY(-3px); border-color: rgba(201,168,76,0.25); z-index: 2; }
+.prod-card:hover::after { transform: scaleX(1); }
+.prod-img { width: 100%; height: 200px; object-fit: cover; display: block; filter: brightness(0.82); transition: filter 0.3s; }
+.prod-card:hover .prod-img { filter: brightness(1); }
+.prod-body { padding: 20px 20px 24px; flex: 1; display: flex; flex-direction: column; }
+.prod-spec { font-size: 11px; font-weight: 700; letter-spacing: 1px; color: var(--gold); margin-bottom: 6px; text-transform: uppercase; }
+.prod-name { font-family: 'Barlow Condensed', sans-serif; font-size: 19px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+.prod-desc { font-size: 12px; font-weight: 300; color: var(--silver); line-height: 1.6; flex: 1; }
+
+/* ── INDUSTRIES ── */
+.industries-section { padding: 88px 56px; background: var(--steel); }
+.ind-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 44px; }
+.ind-card {
+  background: var(--steel-mid); border: 1px solid rgba(200,205,216,0.08);
+  border-left: 3px solid var(--gold); padding: 28px 24px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.ind-card:hover { border-left-color: var(--gold-light); transform: translateY(-2px); }
+.ind-icon { font-size: 32px; margin-bottom: 14px; display: block; }
+.ind-title { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+.ind-text { font-size: 13px; font-weight: 300; color: var(--silver); line-height: 1.65; }
+
+/* ── PROCESS ── */
+.process-section { padding: 88px 56px; background: var(--steel-mid); }
+.process-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; background: rgba(200,205,216,0.06); margin-top: 44px; counter-reset: step; }
+.process-card { background: var(--steel); border: 1px solid rgba(200,205,216,0.07); padding: 30px 24px; position: relative; counter-increment: step; }
+.process-card::before {
+  content: counter(step,'0'counter(step)); /* fallback */
+  position: absolute; top: 24px; right: 24px;
+  font-family: 'Bebas Neue', sans-serif; font-size: 44px; line-height: 1;
+  color: rgba(201,168,76,0.15);
+}
+.process-num { font-family: 'Bebas Neue', sans-serif; font-size: 44px; color: rgba(201,168,76,0.2); line-height: 1; margin-bottom: 12px; }
+.process-title { font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+.process-text { font-size: 13px; font-weight: 300; color: var(--silver); line-height: 1.6; }
+
+/* ── ABOUT STRIP ── */
+.about-strip { background: var(--steel); padding: 88px 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.about-img img { width: 100%; height: 380px; object-fit: cover; display: block; }
+.about-content {}
+.about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 36px; background: rgba(200,205,216,0.06); }
+.about-stat { background: var(--steel-mid); padding: 22px 18px; text-align: center; }
+.about-stat-val { font-family: 'Bebas Neue', sans-serif; font-size: 38px; color: var(--gold); line-height: 1; }
+.about-stat-lbl { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--silver); margin-top: 4px; }
+
+/* ── QUOTE SECTION ── */
+.quote-section { padding: 88px 56px; background: var(--steel-mid); }
+.quote-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.quote-info {}
+.quote-contact-item { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 24px; }
+.qc-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+.qc-label { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+.qc-value { font-size: 14px; color: var(--silver); line-height: 1.6; }
+.qc-value a { color: var(--silver); text-decoration: none; }
+.qc-value a:hover { color: var(--gold); }
+.quote-form-wrap { background: linear-gradient(145deg, #1f2540, #2a3050); border: 1px solid rgba(201,168,76,0.15); border-radius: 4px; padding: 32px 30px; }
+.quote-form-wrap h3 { font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 1px; color: var(--white); margin-bottom: 22px; }
+.q-form { display: flex; flex-direction: column; gap: 12px; }
+.q-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.q-input, .q-select, .q-textarea {
+  width: 100%; padding: 12px 14px;
+  background: rgba(200,205,216,0.07); border: 1px solid rgba(200,205,216,0.15);
+  color: var(--white); font-family: 'Barlow', sans-serif; font-size: 14px; font-weight: 300;
+  border-radius: 2px; outline: none; transition: border-color 0.2s;
+}
+.q-input:focus, .q-select:focus, .q-textarea:focus { border-color: var(--gold); }
+.q-select option { background: #1f2540; }
+.q-textarea { min-height: 110px; resize: vertical; }
+.q-submit { background: var(--gold); color: var(--steel); padding: 14px; border: none; border-radius: 2px; font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer; transition: background 0.2s; }
+.q-submit:hover { background: var(--gold-light); }
+#qsuccess { display:none; color:#7ee787; font-size:13px; text-align:center; padding:10px; background:rgba(126,231,135,0.08); border-radius:2px; margin-top:4px; }
+
+/* ── WA STICKY ── */
+.wa-sticky { position: fixed; right: 28px; bottom: 28px; z-index: 200; display: flex; flex-direction: column; gap: 10px; }
+.wa-sticky a { box-shadow: 0 6px 20px rgba(0,0,0,0.35); }
+
+@media(max-width:768px){
+  .hero { padding: 68px 20px 0; }
+  .hero-inner { grid-template-columns: 1fr; padding: 40px 0 60px; gap: 40px; }
+  .prod-grid { grid-template-columns: 1fr 1fr; }
+  .ind-grid, .process-grid { grid-template-columns: 1fr; }
+  .about-strip { grid-template-columns: 1fr; gap: 36px; padding: 56px 20px; }
+  .quote-inner { grid-template-columns: 1fr; }
+  .industries-section, .products-section, .process-section, .quote-section { padding: 60px 20px; }
+  .wa-sticky { left: 20px; right: 20px; bottom: 16px; flex-direction: row; }
+  .wa-sticky a { flex: 1; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html"><span>CHARNG</span> YUH</a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active" data-i18n="nav_home">Home</a></li>
+    <li><a href="about.html" data-i18n="nav_about">About Us</a></li>
+    <li><a href="products.html" data-i18n="nav_products">Products</a></li>
+    <li><a href="quality.html" data-i18n="nav_quality">Quality</a></li>
+    <li><a href="special-service.html" data-i18n="nav_service">Special Service</a></li>
+    <li><a href="contact.html" class="nav-cta" data-i18n="nav_contact">Contact Us</a></li>
+  </ul>
+  <div class="lang-switcher" id="langSwitcher">
+    <button class="lang-btn" onclick="toggleLang()">
+      <span class="lang-flag" id="currentFlag">🇺🇸</span>
+      <span class="lang-label" id="currentLang">EN</span>
+      <span class="lang-arrow">▼</span>
+    </button>
+    <div class="lang-dropdown">
+      <div class="lang-option" onclick="setLang('en')">🇺🇸 &nbsp;English</div>
+      <div class="lang-option" onclick="setLang('zh')">🇹🇼 &nbsp;繁體中文</div>
+      <div class="lang-option" onclick="setLang('zhs')">🇨🇳 &nbsp;简体中文</div>
+      <div class="lang-option" onclick="setLang('ja')">🇯🇵 &nbsp;日本語</div>
+      <div class="lang-option" onclick="setLang('ko')">🇰🇷 &nbsp;한국어</div>
+      <div class="lang-option" onclick="setLang('vi')">🇻🇳 &nbsp;Tiếng Việt</div>
+      <div class="lang-option" onclick="setLang('th')">🇹🇭 &nbsp;ภาษาไทย</div>
+      <div class="lang-option" onclick="setLang('hi')">🇮🇳 &nbsp;हिन्दी</div>
+      <div class="lang-option" onclick="setLang('ar')">🇸🇦 &nbsp;العربية</div>
+      <div class="lang-option" onclick="setLang('de')">🇩🇪 &nbsp;Deutsch</div>
+      <div class="lang-option" onclick="setLang('es')">🇪🇸 &nbsp;Español</div>
+      <div class="lang-option" onclick="setLang('pt')">🇧🇷 &nbsp;Português</div>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-bg"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge" data-i18n="hero_badge">ISO 9001 Certified · Taiwan Since 1995</div>
+      <h1>RELIABLE<br><em data-i18n="hero_em">TAIWAN FASTENERS</em><br><span data-i18n="hero_h1_line3">FOR GLOBAL BUYERS</span></h1>
+      <p class="hero-lead" data-i18n="hero_sub">High-strength screws, concrete anchors, roofing screws and custom fasteners for construction, solar, OEM and industrial distributors. Built for stable quality, export-ready packaging and long-term supply.</p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn-primary" data-i18n="hero_cta1">Get Free Quote / Sample</a>
+        <a href="products.html" class="btn-ghost" data-i18n="hero_cta2">View Product Range</a>
+      </div>
+      <div class="hero-proof">
+        <div class="proof-item"><div class="proof-val">30+</div><div class="proof-lbl" data-i18n="stat1">Years Experience</div></div>
+        <div class="proof-item"><div class="proof-val">40+</div><div class="proof-lbl" data-i18n="stat2">Countries Served</div></div>
+        <div class="proof-item"><div class="proof-val">24h</div><div class="proof-lbl" data-i18n="cert5">Response Target</div></div>
+      </div>
+    </div>
+    <div class="buyer-panel">
+      <h3 data-i18n="panel_title">WHY BUYERS CHOOSE US</h3>
+      <div class="check-item" data-i18n="panel_c1">Factory-direct supply from Taiwan</div>
+      <div class="check-item" data-i18n="panel_c2">Self-drilling, tapping, concrete and roofing screws</div>
+      <div class="check-item" data-i18n="panel_c3">Custom sizes, materials, coating and packaging</div>
+      <div class="check-item" data-i18n="panel_c4">Export documents and private-label packaging support</div>
+      <div class="check-item" data-i18n="panel_c5">Suitable for distributors, contractors and OEM buyers</div>
+      <a href="contact.html" class="btn-primary" data-i18n="panel_cta">Send Your Drawing / Requirement →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── CERTS STRIP ── -->
+<div class="certs-strip">
+  <div class="cert-item"><span>🏆</span><span data-i18n="cert1">ISO 9001 Certified</span></div>
+  <div class="cert-item"><span>🛡️</span><span>OHSAS 18001</span></div>
+  <div class="cert-item"><span>🇹🇼</span><span data-i18n="cert3">Made in Taiwan</span></div>
+  <div class="cert-item"><span>📦</span><span data-i18n="cert4">Custom Packaging</span></div>
+  <div class="cert-item"><span>⚡</span><span data-i18n="cert5">24-Hour Response</span></div>
+</div>
+
+<!-- ── PRODUCTS ── -->
+<section class="products-section" id="products">
+  <div class="section-header">
+    <div>
+      <div class="section-label" data-i18n="prod_label">Our Products</div>
+      <h2 class="section-title" data-i18n="prod_title2">Fastener solutions for repeat orders, not one-time deals.</h2>
+      <p class="section-desc" data-i18n="prod_sub">Start with standard items, then scale into custom specifications, packaging and long-term supply contracts.</p>
+    </div>
+    <a href="products.html" class="btn-ghost" data-i18n="prod_all">View All Products →</a>
+  </div>
+  <div class="prod-grid">
+    <a class="prod-card" href="products.html#tapping">
+      <img class="prod-img" src="https://static.wixstatic.com/media/d42b40_c701338b09b64e4abae74872841fee86~mv2.jpg/v1/fill/w_600,h_400,al_c,q_85,enc_avif,quality_auto/d42b40_c701338b09b64e4abae74872841fee86~mv2.jpg" alt="Tapping Screws">
+      <div class="prod-body"><div class="prod-spec">#4 / M3 ~ 3/8" / M10</div><div class="prod-name" data-i18n="p1_name">Tapping Screws</div><div class="prod-desc" data-i18n="p1_card_desc">Type A, AB, B, C, D, F, U and all non-standard types for OEM and general industrial use.</div></div>
+    </a>
+    <a class="prod-card" href="products.html#concrete">
+      <img class="prod-img" src="https://static.wixstatic.com/media/d42b40_f470a219e422413e8780610c71712712~mv2.jpg/v1/fill/w_600,h_400,al_c,q_85,enc_avif,quality_auto/d42b40_f470a219e422413e8780610c71712712~mv2.jpg" alt="Concrete Screws">
+      <div class="prod-body"><div class="prod-spec">3/16" · 1/4" · 3/8"</div><div class="prod-name" data-i18n="p2_name">Concrete Screws</div><div class="prod-desc" data-i18n="p2_card_desc">Anchoring solutions for contractors, building suppliers and hardware distributors.</div></div>
+    </a>
+    <a class="prod-card" href="products.html#selfdrilling">
+      <img class="prod-img" src="https://static.wixstatic.com/media/d42b40_7519b784dffb4e3db713f7f402f1d624~mv2.jpg/v1/fill/w_600,h_400,al_c,q_85,enc_avif,quality_auto/d42b40_7519b784dffb4e3db713f7f402f1d624~mv2.jpg" alt="Self Drilling">
+      <div class="prod-body"><div class="prod-spec">#6 / M3 ~ #14 / M6.3</div><div class="prod-name" data-i18n="p3_name">Self-Drilling Screws</div><div class="prod-desc" data-i18n="p3_card_desc">For steel framing, roofing, construction and industrial assembly.</div></div>
+    </a>
+    <a class="prod-card" href="products.html#roofing">
+      <img class="prod-img" src="https://static.wixstatic.com/media/d42b40_4b86c133408b404c9e97753d2d460195~mv2.jpg/v1/fill/w_600,h_400,al_c,q_85,enc_avif,quality_auto/d42b40_4b86c133408b404c9e97753d2d460195~mv2.jpg" alt="Roofing Screws">
+      <div class="prod-body"><div class="prod-spec">EPDM Washer · Color Coated</div><div class="prod-name" data-i18n="p8_name">Roofing Screws</div><div class="prod-desc" data-i18n="p8_card_desc">Weather-resistant fastening for roofing, cladding and exterior construction.</div></div>
+    </a>
+  </div>
+</section>
+
+<!-- ── INDUSTRIES ── -->
+<section class="industries-section" id="industries">
+  <div class="section-label" data-i18n="ind_label">Applications</div>
+  <h2 class="section-title" data-i18n="ind_title">Built for markets where failure is expensive.</h2>
+  <p class="section-desc" data-i18n="ind_desc">From construction sites to solar farms — buyers depend on consistent quality and reliable supply.</p>
+  <div class="ind-grid">
+    <div class="ind-card"><span class="ind-icon">🏗️</span><div class="ind-title" data-i18n="ind1_title">Construction</div><div class="ind-text" data-i18n="ind1_text">For building suppliers, contractors and distributors needing stable quality and repeatable supply at competitive prices.</div></div>
+    <div class="ind-card"><span class="ind-icon">☀️</span><div class="ind-title" data-i18n="ind2_title">Solar & Outdoor</div><div class="ind-text" data-i18n="ind2_text">Corrosion-resistant fasteners with Geomet and Epoxy coating for outdoor systems, solar panels and harsh environments.</div></div>
+    <div class="ind-card"><span class="ind-icon">⚙️</span><div class="ind-title" data-i18n="ind3_title">OEM Manufacturing</div><div class="ind-text" data-i18n="ind3_text">Custom drawings, private packaging and specification control. We work directly with your engineering team.</div></div>
+    <div class="ind-card"><span class="ind-icon">🏠</span><div class="ind-title" data-i18n="ind4_title">Hardware Distributors</div><div class="ind-text" data-i18n="ind4_text">Ready-stock items, poly bag and jar packaging options, flexible MOQ for new product lines and private label brands.</div></div>
+    <div class="ind-card"><span class="ind-icon">🪟</span><div class="ind-title" data-i18n="ind5_title">Window & Door</div><div class="ind-text" data-i18n="ind5_text">Window frame screws in stainless 304, fine thread, low-profile head — for aluminum and PVC frame manufacturers.</div></div>
+    <div class="ind-card"><span class="ind-icon">🌲</span><div class="ind-title" data-i18n="ind6_title">Timber & Deck</div><div class="ind-text" data-i18n="ind6_text">Particle board, deck screws and long-length structural screws up to 200mm for furniture and outdoor decking projects.</div></div>
+  </div>
+</section>
+
+<!-- ── PROCESS ── -->
+<section class="process-section" id="process">
+  <div class="section-label" data-i18n="proc_label">Buying Process</div>
+  <h2 class="section-title" data-i18n="proc_title">Simple process for international buyers.</h2>
+  <p class="section-desc" data-i18n="proc_desc">From inquiry to shipment — we keep it transparent and efficient.</p>
+  <div class="process-grid">
+    <div class="process-card"><div class="process-num">01</div><div class="process-title" data-i18n="proc1_title">Send Requirement</div><div class="process-text" data-i18n="proc1_text">Share size, material, quantity, coating, drawing or application. Any format is fine — email, WhatsApp or the form below.</div></div>
+    <div class="process-card"><div class="process-num">02</div><div class="process-title" data-i18n="proc2_title">Get Quote</div><div class="process-text" data-i18n="proc2_text">We reply within 24 hours with price range, MOQ, lead time and packing options. No obligation.</div></div>
+    <div class="process-card"><div class="process-num">03</div><div class="process-title" data-i18n="proc3_title">Test Sample</div><div class="process-text" data-i18n="proc3_text">Free samples available for qualified buyers. Confirm quality before mass production.</div></div>
+    <div class="process-card"><div class="process-num">04</div><div class="process-title" data-i18n="proc4_title">Start Shipment</div><div class="process-text" data-i18n="proc4_text">Production, QC inspection, export documents and shipment arrangement handled by our team.</div></div>
+  </div>
+</section>
+
+<!-- ── ABOUT STRIP ── -->
+<section class="about-strip" id="about">
+  <div class="about-img">
+    <img src="https://static.wixstatic.com/media/d42b40_647cccfaca50478780a7096637ca5d80~mv2.jpg/v1/fill/w_900,h_600,al_c,q_85,enc_avif,quality_auto/d42b40_647cccfaca50478780a7096637ca5d80~mv2.jpg" alt="Charng Yuh Factory">
+  </div>
+  <div class="about-content">
+    <div class="section-label" data-i18n="about_label">About Us</div>
+    <h2 class="section-title" data-i18n="about_title">TRUSTED SINCE 1995</h2>
+    <p class="section-desc" data-i18n="about_desc">Charng Yuh is a manufacturer & exporter of industrial fasteners in Taiwan since 1995. For more than 30 years, we have developed relationships of trust and respect with customers from the global market.</p>
+    <p class="section-desc" style="margin-top:14px;" data-i18n="about_desc2">Whether you are an importer, OEM, ODM, wholesale distributor or industrial manufacturer — we understand the best way to meet your needs in service, innovation and quality.</p>
+    <div class="about-stats">
+      <div class="about-stat"><div class="about-stat-val">1995</div><div class="about-stat-lbl" data-i18n="about_stat1">Founded</div></div>
+      <div class="about-stat"><div class="about-stat-val">30+</div><div class="about-stat-lbl" data-i18n="about_stat2">Years Experience</div></div>
+      <div class="about-stat"><div class="about-stat-val">40+</div><div class="about-stat-lbl" data-i18n="about_stat3">Countries Served</div></div>
+      <div class="about-stat"><div class="about-stat-val">ISO</div><div class="about-stat-lbl">9001 Certified</div></div>
+    </div>
+    <div style="margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;">
+      <a href="about.html" class="btn-primary" data-i18n="about_btn">Learn More →</a>
+      <a href="products.html" class="btn-ghost" data-i18n="hero_cta2">View Products</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── QUOTE ── -->
+<section class="quote-section" id="quote">
+  <div class="quote-inner">
+    <div class="quote-info">
+      <div class="section-label" data-i18n="con_page_label">Get In Touch</div>
+      <h2 class="section-title" data-i18n="quote_title">Looking for a reliable screw supplier?</h2>
+      <p class="section-desc" data-i18n="quote_desc">Send your inquiry today. For faster quotation, include product type, size, material, coating, quantity and destination country.</p>
+      <div style="margin-top:36px;display:flex;flex-direction:column;gap:18px;">
+        <div class="quote-contact-item"><span class="qc-icon">✉️</span><div><div class="qc-label" data-i18n="con_email_label">Email</div><div class="qc-value"><a href="mailto:charng.yuhind@msa.hinet.net">charng.yuhind@msa.hinet.net</a></div></div></div>
+        <div class="quote-contact-item"><span class="qc-icon">📞</span><div><div class="qc-label" data-i18n="con_tel_label">Telephone</div><div class="qc-value"><a href="tel:+886762833325">+886-7-628-3325</a></div></div></div>
+        <div class="quote-contact-item"><span class="qc-icon">🏭</span><div><div class="qc-label" data-i18n="con_addr_label">Factory Address</div><div class="qc-value">No. 7-1, Lane 2, Gangde Rd.,<br>Gangshan Dist., Kaohsiung City 82055, Taiwan</div></div></div>
+        <div class="quote-contact-item"><span class="qc-icon">💬</span><div><div class="qc-label" data-i18n="con_wa_label">WhatsApp</div><div class="qc-value"><a href="https://wa.me/996923240025" target="_blank">+996 923 240 025</a></div></div></div>
+      </div>
+    </div>
+    <div class="quote-form-wrap">
+      <h3 data-i18n="quote_form_title">QUICK INQUIRY</h3>
+      <form class="q-form" onsubmit="handleQuote(event)">
+        <div class="q-form-row">
+          <input class="q-input" type="text" required data-i18n-ph="con_f_name" placeholder="Your Name *">
+          <input class="q-input" type="text" required data-i18n-ph="con_f_company" placeholder="Company *">
+        </div>
+        <div class="q-form-row">
+          <input class="q-input" type="email" required data-i18n-ph="con_f_email" placeholder="Email *">
+          <input class="q-input" type="text" data-i18n-ph="con_f_country" placeholder="Country">
+        </div>
+        <select class="q-select">
+          <option data-i18n="con_f_product">-- Select a product --</option>
+          <option>Tapping Screws</option>
+          <option>Concrete Screws</option>
+          <option>Self-Drilling Screws</option>
+          <option>Painted Head Screws</option>
+          <option>Particle Board & Deck Screws</option>
+          <option>Window Frame Screws</option>
+          <option>Long Size Screws</option>
+          <option>Roofing & Piercing Screws</option>
+          <option>Custom Packaging / OEM</option>
+        </select>
+        <textarea class="q-textarea" data-i18n-ph="con_f_msg" placeholder="Size, material, coating, quantity, destination country..."></textarea>
+        <button type="submit" class="q-submit" data-i18n="con_f_submit">Send Inquiry — Free Quote</button>
+        <div id="qsuccess" data-i18n="con_success">✓ Thank you! We'll reply within 24 hours.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <div class="footer-logo"><span>CHARNG</span> YUH (GAU) CO., LTD.</div>
+    <div class="footer-info" style="margin-top:8px;">Taiwan fastener manufacturer and exporter since 1995. ISO 9001 certified. Serving global buyers in construction, industrial and OEM markets.<br>No. 7-1, Lane 2, Gangde Rd., Gangshan Dist., Kaohsiung City 82055, Taiwan · Tel: +886-7-628-3325 · charng.yuhind@msa.hinet.net</div>
+  </div>
+  <div class="footer-links">
+    <a href="index.html" data-i18n="nav_home">Home</a>
+    <a href="about.html" data-i18n="nav_about">About</a>
+    <a href="products.html" data-i18n="nav_products">Products</a>
+    <a href="quality.html" data-i18n="nav_quality">Quality</a>
+    <a href="special-service.html" data-i18n="nav_service">Special Service</a>
+    <a href="contact.html" data-i18n="nav_contact">Contact</a>
+  </div>
+  <div class="footer-info">© 2025 Charng Yuh (GAU) Co., Ltd.</div>
+</footer>
+
+<!-- WA Sticky -->
+<div class="wa-sticky">
+  <a href="https://wa.me/996923240025" target="_blank" class="btn-primary" style="border-radius:2px;padding:11px 18px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;">💬 WhatsApp Us</a>
+  <a href="mailto:charng.yuhind@msa.hinet.net" class="btn-ghost" style="border-radius:2px;padding:11px 18px;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;">✉️ Email Inquiry</a>
+</div>
+
+<script src="i18n.js"></script>
+<script>
+applyLang(getLang());
+
+applyLang(getLang());
+
+
+
+function handleQuote(e) {
+  e.preventDefault();
+  document.getElementById('qsuccess').style.display = 'block';
+  e.target.reset();
+  setTimeout(() => document.getElementById('qsuccess').style.display = 'none', 6000);
+}
+</script>
+</body>
+</html>
